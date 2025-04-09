@@ -1,0 +1,15 @@
+application:
+  description: "@project.description@"
+  version: "@project.version@"
+  title: "Base Service"
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://${DATABASE_URL}/${DATABASE_NAME}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  sql.init.platform: org.hibernate.dialect.PostgreSQLDialect
